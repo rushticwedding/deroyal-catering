@@ -313,7 +313,14 @@
     border-radius: 10px; padding: 32px 24px; transition: all .22s;
   }
   .fas-card:hover { box-shadow: 0 10px 32px rgba(200,162,75,.12); transform: translateY(-3px); }
-  .fas-icon { font-size: 2rem; margin-bottom: 16px; display: block; }
+  .fas-icon { width: 58px; height: 58px; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; background: rgba(200,162,75,.1); border: 1px solid rgba(200,162,75,.32); border-radius: 50%; }
+  .fas-icon svg { display: block; }
+  .wa-btn svg { stroke: currentColor; }
+  a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    html { scroll-behavior: auto; }
+  }
   .fas-card h4 { font-family: 'Cormorant Garamond', serif; color: var(--emerald); font-size: 1.3rem; margin-bottom: 10px; font-weight: 700; }
   .fas-card p { font-size: .88rem; color: var(--gray); line-height: 1.65; }
 
@@ -383,7 +390,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-brand">De Royal Catering</a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Menu" onclick="toggleNav()">☰</button>
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu" onclick="toggleNav()"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   <ul class="nav-links" id="navLinks">
     <li><a href="#tentang" onclick="closeNav()">Tentang</a></li>
     <li><a href="#menu" onclick="closeNav()">Menu</a></li>
@@ -415,7 +422,7 @@
       <a href="#menu" class="btn btn-secondary">Lihat Menu Lengkap</a>
     </div>
   </div>
-  <div class="scroll-hint">↓ scroll</div>
+  <div class="scroll-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg> scroll</div>
 </section>
 
 <!-- TENTANG -->
@@ -508,7 +515,7 @@
         <a href="https://wa.me/6282227205000?text=Halo%20De%20Royal%2C%20saya%20tertarik%20Buffet%20C%2035rb" class="btn btn-outline-emerald" target="_blank">Tanya Ketersediaan</a>
       </div>
     </div>
-    <p style="text-align:center;color:var(--gray-lt);font-size:.86rem;margin-top:32px;font-style:italic;">✨ Semua paket bisa custom harga & menu sesuai budget acara Anda</p>
+    <p style="text-align:center;color:var(--gray-lt);font-size:.86rem;margin-top:32px;font-style:italic;">✦ &nbsp;Semua paket bisa custom harga & menu sesuai budget acara Anda</p>
   </div>
 </section>
 
@@ -564,7 +571,7 @@
         <div class="result-breakdown" id="result-breakdown">Belum ada menu ditambahkan.</div>
       </div>
       <div style="text-align:center;margin-top:24px;">
-        <a id="wa-pesan" href="#" target="_blank" class="wa-btn">💬 Kirim Estimasi via WhatsApp</a>
+        <a id="wa-pesan" href="#" target="_blank" class="wa-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A24B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4.5"/></svg>&nbsp; Kirim Estimasi via WhatsApp</a>
       </div>
       <p class="calc-note">* Min. 100 porsi untuk Gubug & Buffet. Harga bisa custom. Hubungi kami untuk konfirmasi.</p>
     </div>
@@ -632,12 +639,12 @@
     <h2 class="section-title">Fasilitas <em>Lengkap</em></h2>
     <div class="divider"></div>
     <div class="fasilitas-grid">
-      <div class="fas-card reveal"><span class="fas-icon">🌸</span><h4>Dekorasi Buffet</h4><p>Tata meja elegan, pilihan nuansa warna sesuai tema acara Anda.</p></div>
-      <div class="fas-card reveal"><span class="fas-icon">🍽️</span><h4>Peralatan Saji</h4><p>Alat saji dan alat makan lengkap, higienis, dan berkelas.</p></div>
-      <div class="fas-card reveal"><span class="fas-icon">👥</span><h4>Tim Pramusaji</h4><p>Crew produksi & pramusaji disesuaikan jumlah pesanan.</p></div>
-      <div class="fas-card reveal"><span class="fas-icon">🎨</span><h4>Custom Menu</h4><p>Harga & menu disesuaikan budget dan selera acara Anda.</p></div>
-      <div class="fas-card reveal"><span class="fas-icon">🏮</span><h4>Gubug / Stall</h4><p>Aneka stall menu pilihan untuk memeriahkan resepsi pernikahan.</p></div>
-      <div class="fas-card reveal"><span class="fas-icon">🍱</span><h4>Nasi Box & Tumpeng</h4><p>Pilihan praktis mulai dari harga ekonomis untuk semua acara.</p></div>
+      <div class="fas-card reveal"><span class="fas-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C8A24B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2.6"/><path d="M12 2.5c1.8 0 3 1.6 3 3.4 0 1.4-1.2 2.8-3 3.5-1.8-.7-3-2.1-3-3.5 0-1.8 1.2-3.4 3-3.4z"/><path d="M12 21.5c-1.8 0-3-1.6-3-3.4 0-1.4 1.2-2.8 3-3.5 1.8.7 3 2.1 3 3.5 0 1.8-1.2 3.4-3 3.4z"/><path d="M2.5 12c0-1.8 1.6-3 3.4-3 1.4 0 2.8 1.2 3.5 3-.7 1.8-2.1 3-3.5 3-1.8 0-3.4-1.2-3.4-3z"/><path d="M21.5 12c0 1.8-1.6 3-3.4 3-1.4 0-2.8-1.2-3.5-3 .7-1.8 2.1-3 3.5-3 1.8 0 3.4 1.2 3.4 3z"/></svg></span><h4>Dekorasi Buffet</h4><p>Tata meja elegan, pilihan nuansa warna sesuai tema acara Anda.</p></div>
+      <div class="fas-card reveal"><span class="fas-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C8A24B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v7a2 2 0 0 0 2 2v9"/><path d="M9 3v7"/><path d="M5 6h4"/><path d="M17 3c-1.7 0-3 2.2-3 5 0 2.2 1 3.5 2 4v9"/><path d="M16 12h2"/></svg></span><h4>Peralatan Saji</h4><p>Alat saji dan alat makan lengkap, higienis, dan berkelas.</p></div>
+      <div class="fas-card reveal"><span class="fas-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C8A24B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 15.2c2.4.3 4 2 4 4.3"/></svg></span><h4>Tim Pramusaji</h4><p>Crew produksi & pramusaji disesuaikan jumlah pesanan.</p></div>
+      <div class="fas-card reveal"><span class="fas-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C8A24B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2"/><circle cx="16" cy="6" r="2"/><path d="M4 12h2M10 12h10"/><circle cx="8" cy="12" r="2"/><path d="M4 18h8M16 18h4"/><circle cx="14" cy="18" r="2"/></svg></span><h4>Custom Menu</h4><p>Harga & menu disesuaikan budget dan selera acara Anda.</p></div>
+      <div class="fas-card reveal"><span class="fas-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C8A24B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 6l1.5-3h15L21 6"/><path d="M3 6c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3"/><path d="M9 20v-6h6v6"/></svg></span><h4>Gubug / Stall</h4><p>Aneka stall menu pilihan untuk memeriahkan resepsi pernikahan.</p></div>
+      <div class="fas-card reveal"><span class="fas-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C8A24B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.3 8 12 3.5 20.7 8v8L12 20.5 3.3 16z"/><path d="M3.3 8 12 12.3 20.7 8"/><path d="M12 12.3V20.5"/><path d="M7.6 5.8l8.8 4.4"/></svg></span><h4>Nasi Box & Tumpeng</h4><p>Pilihan praktis mulai dari harga ekonomis untuk semua acara.</p></div>
     </div>
   </div>
 </section>
@@ -651,21 +658,21 @@
     <div class="contact-grid">
       <div>
         <div class="contact-item">
-          <div class="contact-icon">📍</div>
+          <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8A24B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
           <div>
             <h4>Lokasi</h4>
             <p>Jl. Ledok Babadan RT 28, Babadan,<br>Banguntapan, Bantul</p>
-            <a href="https://maps.app.goo.gl/YuD498ymuUvuuRgy7" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;color:var(--gold-lt);font-size:.85rem;text-decoration:none;">🗺️ Lihat di Google Maps →</a>
+            <a href="https://maps.app.goo.gl/YuD498ymuUvuuRgy7" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;color:var(--gold-lt);font-size:.85rem;text-decoration:none;">Lihat di Google Maps →</a>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">📱</div>
+          <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8A24B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></div>
           <div>
             <h4>WhatsApp</h4>
             <a href="https://wa.me/6282227205000" target="_blank">0822 2720 5000</a>
           </div>
         </div>
-        <a href="https://wa.me/6282227205000?text=Halo%20De%20Royal%20Catering%2C%20saya%20ingin%20konsultasi%20catering%20🙏" class="wa-btn" target="_blank">💬 Chat WhatsApp Sekarang</a>
+        <a href="https://wa.me/6282227205000?text=Halo%20De%20Royal%20Catering%2C%20saya%20ingin%20konsultasi%20catering%20🙏" class="wa-btn" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A24B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.5-4.4A8.5 8.5 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4.5"/></svg>&nbsp; Chat WhatsApp Sekarang</a>
       </div>
       <div class="reason-box">
         <h3>Kenapa Pilih De Royal?</h3>
@@ -760,7 +767,7 @@
     const jenis = document.getElementById('c-jenis').value;
     const idx   = parseInt(document.getElementById('c-paket').value) || 0;
     const [nama,,detail] = PAKET[jenis][idx];
-    document.getElementById('menu-detail').innerHTML = '🍽️ <strong>' + nama + ':</strong> ' + detail;
+    document.getElementById('menu-detail').innerHTML = '<strong>' + nama + ':</strong> ' + detail;
   }
 
   function tambahItem(){
